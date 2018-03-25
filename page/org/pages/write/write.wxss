@@ -1,0 +1,13 @@
+@import "../../../common/lib/weui.wxss";
+
+.write-input{
+background: #ffffff;
+height: 200rpx;
+width: 100%;
+}
+
+.weui-cell_s{
+
+background: #ffffff;
+padding:10px;
+}

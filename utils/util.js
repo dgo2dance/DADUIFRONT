@@ -1,0 +1,48 @@
+function formatTime(date) {
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
+
+
+  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+
+function formatDate(now) { 
+var year=now.getFullYear(); 
+var month=now.getMonth()+1; 
+var date=now.getDate(); 
+var hour=now.getHours(); 
+var minute=now.getMinutes(); 
+var second=now.getSeconds(); 
+return year+"-"+month+"-"+date; 
+}   
+
+function formatNumber(n) {
+  n = n.toString()
+  return n[1] ? n : '0' + n
+}
+
+function formatLocation(longitude, latitude) {
+  if (typeof longitude === 'string' && typeof latitude === 'string') {
+    longitude = parseFloat(longitude)
+    latitude = parseFloat(latitude)
+  }
+
+  longitude = longitude.toFixed(2)
+  latitude = latitude.toFixed(2)
+
+  return {
+    longitude: longitude.toString().split('.'),
+    latitude: latitude.toString().split('.')
+  }
+}
+
+module.exports = {
+  formatTime: formatTime,
+  formatLocation: formatLocation,
+  formatDate:formatDate,
+}

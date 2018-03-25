@@ -1,0 +1,122 @@
+
+<view class="weui-cells weui-cells_form">
+
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">承诺我是单身:</text>
+        </view>
+        <view class="weui-cell__bd">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{items}}">
+         <checkbox name="isAlone" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+         </label>
+        </checkbox-group>
+        </view>
+    </view>
+
+
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">出生年月:</text>
+        </view>
+        <view class="weui-cell__bd">
+      <picker  name="birthday" mode="date" value="{{userInfo.birthdayTime}}" start="1980-09-01" end="2010-09-01" bindchange="bindDateChange">
+                  <view class="weui-input">{{userInfo.birthdayTime}}</view>
+            </picker>
+        </view>
+   	</view>
+
+   	<view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">城市:</text>
+        </view>
+        <view class="weui-cell__bd">
+            <picker name="city" bindchange="bindPickerChange" value="{{cityIndex}}" range="{{cityArray}}" range-key="name">
+              <view class="weui-input">{{cityArray[cityIndex].name}}</view>
+            </picker>
+        </view>
+   	</view>
+
+   	<view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">身高:</text>
+        </view>
+        <view class="weui-cell__bd">
+               <slider name="height" value="{{userInfo.height}}" bindchange="slider4change" min="100" max="200" show-value/>
+        </view>
+   	</view>
+
+
+   	<view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">学历:</text>
+        </view>
+        <view class="weui-cell__bd">
+            <picker name="degree" bindchange="bindPickerChange" value="{{degreeIndex}}" range="{{degreeArray}}">
+              <view class="weui-input">{{degreeArray[degreeIndex]}}</view>
+            </picker>
+        </view>
+   	</view>
+
+
+   	<view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">职业:</text>
+        </view>
+        <view class="weui-cell__bd">
+           <input  placeholder="" type="text" value="{{userInfo.profession}}" name="profession"/>
+        </view>
+   	</view>
+
+
+   	<view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">收入:</text>
+        </view>
+        <view class="weui-cell__bd">
+            <picker name="income" bindchange="bindPickerChange" value="{{incomeIndex}}" range="{{incomeArray}}">
+              <view class="weui-input">{{incomeArray[incomeIndex]}}</view>
+            </picker>
+        </view>
+   	</view>
+
+
+   	<view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">是否有房:</text>
+        </view>
+        <view class="weui-cell__bd">
+           <view class="weui-cell__ft">
+            <switch name="hasHouse" checked="{{hasHouseChecked}}"/>
+          </view>
+        </view>
+   	</view>
+
+   	 <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">是否有车:</text>
+        </view>
+        <view class="weui-cell__bd">
+           <view class="weui-cell__ft">
+            <switch name="hasCar" checked="{{hasCarChecked}}"/>
+          </view>
+        </view>
+   	</view>
+
+   	<view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">微信号:</text>
+        </view>
+        <view class="weui-cell__bd">
+           <input  placeholder="" type="text" value="{{userInfo.weChatNum}}" name="weChatNum"/>
+        </view>
+   	</view>
+
+
+	<button type="primary" form-type="submit">下一步</button>
+</form>
+
+</view>
+

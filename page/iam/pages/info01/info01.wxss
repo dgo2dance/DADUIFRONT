@@ -1,0 +1,6 @@
+@import "../../../common/lib/weui.wxss";
+
+.subContainer{
+  margin-top:30px;
+  margin-left: 40px;
+}

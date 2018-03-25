@@ -1,0 +1,48 @@
+<!--main.wxml-->
+
+
+
+
+<view class="container1">
+
+
+
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+
+    <block>
+
+    <view class="org_top">
+    
+        <view class="top_name"> 每日一图</view>
+        </view>
+
+    </block>
+
+
+    <block wx:for-items="{{items}}">
+        <navigator url="../person/person?id={{item.id}}" class="flex item">
+            <view class="item_left">
+                <image src="{{item.avatarUrl}}"/>
+            </view>
+            <view class="flex_auto item_middle" >
+
+                <view wx:if="{{item.gender == 1}}">
+                <text class="title">{{item.nickname}}</text>
+                <text class="gender">  G</text>
+                </view>
+
+                <view wx:else="{{item.gender == 1}}">
+                <text class="title">{{item.nickname}}</text>
+                <text class="gender">  M</text>
+                </view>
+
+
+            </view>
+        </navigator>
+    </block>
+
+</view>
+
+

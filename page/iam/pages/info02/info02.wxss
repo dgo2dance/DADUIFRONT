@@ -1,0 +1,20 @@
+@import "../../../common/lib/weui.wxss";
+
+
+
+.section_title{
+	padding-left:20px;
+	background-color: #ffffff;
+  line-height: 125rpx; 
+}
+
+.section_input{
+	padding-left:20px;
+
+}
+
+.write-input{
+background: #ffffff;
+height: 150rpx;
+width: 100%;
+}

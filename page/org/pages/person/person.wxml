@@ -1,0 +1,91 @@
+
+
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickname}}</text>
+  </view>
+
+<view class="weui-cells weui-cells_form">
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">城市:</text>
+        </view>
+        <view class="weui-cell__bd">
+           <text class="weui-label">{{userInfo.city}}</text>
+        </view>
+      </view>
+
+
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">身高:</text>
+        </view>
+        <view class="weui-cell__bd">
+           <text class="weui-label">{{userInfo.height}}cm</text>
+        </view>
+      </view>
+
+       <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">职业:</text>
+        </view>
+        <view class="weui-cell__bd">
+           <text class="weui-label">{{userInfo.profession}}</text>
+        </view>
+      </view>
+
+          <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">生日:</text>
+        </view>
+        <view class="weui-cell__bd">
+           <text class="weui-label">{{userInfo.birthdayTime}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">是否有:</text>
+        </view>
+        <view class="weui-cell__bd">
+           <text class="weui-label">{{userInfo.isHouse}}</text>
+        </view>
+      </view>
+
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <text class="weui-label">介绍:</text>
+        </view>
+        <view class="weui-cell__bd">
+           <text class="weui-label">{{userInfo.introduce}}</text>
+        </view>
+      </view>
+
+
+
+
+        <view class="section">
+
+        <view class="section_title">照片</view>
+        <view class="section_input">
+             <block wx:for-items="{{userInfo.userImg}}" wx:key="{{item.id}}">
+             <navigator url="pages/{{item.url}}" class="navigator">
+             <image src="{{item.imgPath}}"></image>
+        </navigator>
+        </block>
+        </view>
+    </view>
+
+
+
+</view>
+
+
+    <view class="navigator-box">
+    </view>
+ 
+  </view>
+
+

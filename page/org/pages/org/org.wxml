@@ -1,0 +1,49 @@
+<!--main.wxml-->
+
+
+
+
+<view class="container1">
+
+
+
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+
+    <block>
+
+    <navigator url="../personList/personList?id={{id}}" class="org_top">
+    
+        <view class="top_name"> 每日一图</view>
+    </navigator>
+
+    </block>
+
+
+    <block wx:for-items="{{items}}">
+        <view class="flex item">
+            <view class="item_left" data-id="{{item.createUserId}}" bindtap="goUserDetail">
+                <image src="{{item.avatarUrl}}"/>
+            </view>
+            <view class="flex_auto item_middle">
+                <view><text class="title">{{item.nickname}}</text></view>
+                <view><text class="sub_title">{{item.con}}</text></view>
+                </view>
+        
+        </view>
+    </block>
+
+    
+  <view class="footer-box">
+   
+        <view class="join" bindtap="add">申请加入</view>
+        <view class="write" bindtap="toWrite">发表</view>
+    </view>
+
+
+
+</view>
+
+
+

@@ -1,0 +1,132 @@
+/**index.wxss**/
+
+.container {
+    background-color: #F2f2f2;
+}
+
+
+view.text {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 10px 10px 12px;
+    font-size: 15px;
+    color: #656565;
+}
+.org_top{
+width: 100%;
+height:400rpx;
+background-color: #cf616a;
+
+
+}
+
+.top_name{
+margin: 140rpx auto;
+text-align: center;
+}
+
+
+view.text:before {
+    position: absolute;
+    display: block;
+    content: ' ';
+    left: -5px;
+    width: 2px;
+    height: 100%;
+    background-color: #09bb07;
+}
+
+
+view.text text {
+    margin-left: 10px;
+    line-height: 18px;
+}
+
+.item {
+    padding: 10px;
+    color: #787878;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.item image {
+    display: block;
+    width: 98rpx;
+    height: 98rpx;
+    border-radius:50%;
+    margin: 20rpx;
+    background-color: orange;
+}
+
+.item_middle {
+    flex: 1;
+    margin-left: 10px;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+.item_middle .title {
+    font-size: 16px;
+    color: #333;
+}
+.item_middle .sub_title {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0px;
+}
+
+.item_middle .actor {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0px;
+}
+
+.item_right .score {
+    font-size: 12px;
+    color: #cf616a;
+}
+
+.item_right .action {
+    margin-top: 30px;
+    border: 1px solid #29cc6d;
+    border-radius: 2px;
+    color: #29cc6d;
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+}
+
+
+
+.footer-box{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  box-shadow:0 0 8rpx 0 ;
+}
+
+.footer-box .join{
+  text-align: center;
+  width: 375rpx;
+  height: 100%;
+  line-height: 100rpx;
+  background-color: #ff6850;
+  color:#fff;
+  font-size: 34rpx;
+}
+
+.footer-box .write{
+  text-align: center;
+  height: 100%;
+  width: 375rpx;
+  line-height: 100rpx;
+  background-color: #e64340;
+  color:#fff;
+  font-size: 34rpx;
+}
